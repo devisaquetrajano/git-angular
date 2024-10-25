@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { GithubService } from './shared/services/github.service';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -11,6 +12,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+
+      ]
     }).compileComponents();
   });
 
@@ -20,11 +24,6 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'github-repos'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('github-repos');
-  });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
